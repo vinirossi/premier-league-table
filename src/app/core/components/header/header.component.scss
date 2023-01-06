@@ -1,0 +1,31 @@
+.topnav {
+  background-color: #37003c;
+  height: 65px;
+  overflow: hidden;
+  width: auto;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__logo {
+      height: 60px;
+      width: 125px;
+    }
+
+    &__link {
+      color: #f2f2f2;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+
+      &:hover {
+        background-color: #ddd;
+        color: black;
+      }
+    }
+  }
+}
+
+
