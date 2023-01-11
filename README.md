@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Json-server BRQ-Travel
+
+Run `npm install -g json-server` para instalar o json-server.
+Run `json-server --watch db.json` para ativar o servidor com a API Json.
