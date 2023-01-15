@@ -2,6 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
+## Features
+
+- [ ] Atualizar o Readme
+- [ ] Estilo da Tabela das partidas do dia
+- [ ] Mostrar apenas as partidas do dia
+- [ ] mostrar o logo dos times nas partidas do dia
+- [ ] Dark Theme
+- [ ] Tradução dos textos
+- [ ] Artilheiros
+
+## Learnings
+
+- [ ] Chamada de API externa
+- [ ] Pipe para formatar data
+- [ ] Conceitos de RXJS utilizando Observable
+- [ ] Conceitos de Git Flow
+- [ ] Conceitos de Mensagens de commit
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
