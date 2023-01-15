@@ -10,7 +10,7 @@ import { FooterComponent } from './core/components/footer/footer.component';
 import { MainComponent } from './core/components/main/main.component';
 import { MatchesComponent } from './features/matches/matches.component';
 import { StandingsComponent } from './features/standings/standings.component';
-import { Standings2Component } from './features/standings2/standings2.component';
+import { StandingsBackupComponent } from './features/standings-backup/standings-backup.component';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
@@ -24,7 +24,7 @@ import { MatTableModule } from '@angular/material/table';
     MainComponent,
     MatchesComponent,
     StandingsComponent,
-    Standings2Component
+    StandingsBackupComponent
   ],
   imports: [
     BrowserModule,
