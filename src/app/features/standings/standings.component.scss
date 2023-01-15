@@ -1,5 +1,6 @@
 table {
   width: 100%;
+  height: auto;
 }
 
 .mat-column-id {
@@ -9,8 +10,18 @@ table {
   text-align: center;
 }
 
+.mat-column-id {
+  width: 20px;
+  display: flex;
+  // text-align: center;
+}
+
 img {
   padding: 10px 0;
-  height: 64px;
-  width: 64px;
+  height: 30px;
+  width: 30px;
+}
+
+table, th, td {
+  border: 1px solid;
 }

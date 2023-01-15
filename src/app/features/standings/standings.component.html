@@ -1,25 +1,79 @@
-<table mat-table [dataSource]="clubs" class="mat-elevation-z8">
-
-  <!-- Position Column -->
-  <ng-container matColumnDef="id">
+<table mat-table [dataSource]="clubs[0]?.league.standings[0]" class="mat-elevation-z8">
+  <ng-container matColumnDef="position">
     <th mat-header-cell *matHeaderCellDef> Posição </th>
-    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.rank}} </td>
   </ng-container>
 
-    <!-- Badge Club Column -->
-  <ng-container matColumnDef="urlBadge">
-    <th mat-header-cell *matHeaderCellDef> Posição </th>
+  <!-- <ng-container matColumnDef="logo">
+    <th mat-header-cell *matHeaderCellDef> Escudo </th>
     <td mat-cell *matCellDef="let element">
-      <img [src]="element.urlBadge" alt="logo do clube de futebol">
+      <img [src]="element.team.logo" alt="logo do clube de futebol">
     </td>
-  </ng-container>
+  </ng-container> -->
 
-  <!-- Club Name Column -->
   <ng-container matColumnDef="club">
     <th mat-header-cell *matHeaderCellDef> Clube </th>
-    <td mat-cell *matCellDef="let element"> {{element.club}} </td>
+    <td mat-cell *matCellDef="let element">
+      <img [src]="element.team.logo" alt="logo do clube de futebol"> {{element.team.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="points">
+    <th mat-header-cell *matHeaderCellDef> Pontos </th>
+    <td mat-cell *matCellDef="let element"> {{element.points}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="played">
+    <th mat-header-cell *matHeaderCellDef> Partidas Jogadas </th>
+    <td mat-cell *matCellDef="let element"> {{element.all.played}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="won">
+    <th mat-header-cell *matHeaderCellDef> Vitórias </th>
+    <td mat-cell *matCellDef="let element"> {{element.all.win}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="drawn">
+    <th mat-header-cell *matHeaderCellDef> Empates </th>
+    <td mat-cell *matCellDef="let element"> {{element.all.draw}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="lost">
+    <th mat-header-cell *matHeaderCellDef> Derrotas </th>
+    <td mat-cell *matCellDef="let element"> {{element.all.lose}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="goalsFor">
+    <th mat-header-cell *matHeaderCellDef> Gols Marcados </th>
+    <td mat-cell *matCellDef="let element"> {{element.all.goals.for}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="goalsAgainst">
+    <th mat-header-cell *matHeaderCellDef> Gols Contra </th>
+    <td mat-cell *matCellDef="let element"> {{element.all.goals.against}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="goalsDifference">
+    <th mat-header-cell *matHeaderCellDef> Saldo de Gols </th>
+    <td mat-cell *matCellDef="let element"> {{element.goalsDiff}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+<!-- <table>
+  <thead>
+    <th>Posição</th>
+    <th>Escudo</th>
+    <th>Time</th>
+    <th>Pontos</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let time of clubs[0].league.standings[0]">
+      <td>{{time.rank}}</td>
+      <td>{{time.team.name}}</td>
+      <td>{{time.points}}</td>
+    </tr>
+  </tbody>
+</table> -->
+
