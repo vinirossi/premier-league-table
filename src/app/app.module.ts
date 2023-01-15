@@ -11,6 +11,7 @@ import { MainComponent } from './core/components/main/main.component';
 import { MatchesComponent } from './features/matches/matches.component';
 import { StandingsComponent } from './features/standings/standings.component';
 
+import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
@@ -27,6 +28,7 @@ import { MatTableModule } from '@angular/material/table';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatCardModule,
     MatTableModule
   ],
   providers: [],
