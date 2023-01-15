@@ -1,1 +1,17 @@
-<p>matches works!</p>
+<table>
+  <thead>
+    <th>Data da Partida</th>
+    <th>Partida de nº</th>
+    <th>Times</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let time of matchesLeague.matches">
+      <td>{{time.utcDate | date : 'dd/MM/yyyy HH:mm'}}</td>
+      <td>{{time.matchday}}</td>
+
+        <td>{{time.homeTeam.name}} {{time.score.fullTime.homeTeam}} x {{time.score.fullTime.awayTeam}} {{time.awayTeam.name}}</td>
+      <!-- <td><img src="{{time.team.crestUrl}}"></td> -->
+
+    </tr>
+  </tbody>
+</table>

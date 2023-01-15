@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StandingsComponent } from './features/standings/standings.component';
 import { MatchesComponent } from './features/matches/matches.component';
+import { StandingsBackupComponent } from './features/standings-backup/standings-backup.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: "standings",
     component: StandingsComponent
+  },
+  {
+    path: "standingsbackup",
+    component: StandingsBackupComponent
   }
 ];
 
